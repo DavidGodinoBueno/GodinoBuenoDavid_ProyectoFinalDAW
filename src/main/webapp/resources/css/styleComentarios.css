@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.contenedor {
+	border-radius:10px;
+	overflow-y:scroll;
+	height:600px;
+}
+
+.elbody::-webkit-scrollbar {
+    width: 15px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+.elbody::-webkit-scrollbar-thumb {
+    background: #ff8000;
+    border-radius: 10px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.elbody::-webkit-scrollbar-thumb:hover {
+    background: #c46200;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.elbody::-webkit-scrollbar-thumb:active {
+    background-color: #c46200;
+}
+
+.elbody::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.elbody::-webkit-scrollbar-track:hover,
+.elbody::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+.elerror {
+	display:none;
+}
+
+.mostrarErroresInputs {
+	display:block;
+}
+
+.contenedor::-webkit-scrollbar {
+    width: 8px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background: #f2b600;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.contenedor::-webkit-scrollbar-thumb:hover {
+    background: #b78900;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.contenedor::-webkit-scrollbar-thumb:active {
+    background-color: #b78900;
+}
+
+.contenedor::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.contenedor::-webkit-scrollbar-track:hover,
+.contenedor::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+.redsocial:hover {
+	 transform: scale(1.1);
+}

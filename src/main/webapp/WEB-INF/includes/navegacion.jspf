@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img alt="" src="./resources/img/filmicono.png" 
+    width="60px" height="60px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" 
+          href="${pageContext.request.contextPath}/ControllerCliente?keyword=Buscar">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ControllerCliente?keyword=Carrito">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/carrito.png"
+            width="20px" height="20px"/>
+          <c:if test="${contador > 0}">
+          <span class="badge rounded-pill bg-danger text-warning">${contador}</span></c:if>Carrito</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/usuario.png"
+            width="20px" height="20px"/>${nombrecliente}
+          </a>
+          <ul class="dropdown-menu col-sm-3 col-5" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item text-center" href="#">
+            <img src="${pageContext.request.contextPath}/ControllerCliente?elnombre=${nombrecliente}&keyword=mostrarperfil" width="100px" height="100px"
+            style="border-radius:100%;"></a></li>
+            <li><a class="dropdown-item text-center" href="#"><strong>${nombrecliente}</strong></a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-center text-danger" href="ControllerCliente?keyword=Logout">
+             <img alt="" src="${pageContext.request.contextPath}/resources/img/cerrarsesion.png"
+            width="20px" height="20px"/>&nbsp;&nbsp;Cerrar sesión</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ControllerCliente?keyword=IrANotas">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/comentarios.png"
+            width="20px" height="20px"/>
+          Comentar</a>
+        </li>
+        <c:if test="${rolcliente.getRol().contains('ADMINISTRADOR')}"> 
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="opcionesadmin" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/managerfilm.png"
+            width="20px" height="20px"/>Gestionar películas
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="opcionesadmin">
+            <li><a class="dropdown-item text-center" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrAltaPelicula">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/iconopeli.png"
+            width="20px" height="20px"/>
+            Nueva pelicula</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-center" href="${pageContext.request.contextPath}/ControllerAdmin?keyword=IrAModificarEliminar">
+            <img alt="" src="${pageContext.request.contextPath}/resources/img/editar.png"
+            width="20px" height="20px"/>
+            Editar/eliminar películas</a></li>
+          </ul>
+         </li>
+        </c:if>
+        <li class="nav-item">
+          <a class="nav-link" href="ControllerCliente?namecliente=${nombrecliente}&keyword=VerCompras">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/bolsito.png"
+            width="20px" height="20px"/>
+          Ver Compras</a>
+        </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+          <img alt="" src="${pageContext.request.contextPath}/resources/img/telefono.png"
+            width="20px" height="20px"/>
+          Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

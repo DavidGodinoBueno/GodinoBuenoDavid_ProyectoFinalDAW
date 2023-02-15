@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.contenedor::-webkit-scrollbar {
+    width: 15px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background: #ff8000;
+    border-radius: 10px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.contenedor::-webkit-scrollbar-thumb:hover {
+    background: #c46200;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.contenedor::-webkit-scrollbar-thumb:active {
+    background-color: #c46200;
+}
+
+.contenedor::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+.contenedor::-webkit-scrollbar-track:hover,
+.contenedor::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+#notFound {
+	border-radius:10px;
+	background:linear-gradient(45deg, grey, white);
+	text-shadow:0px 2px 3px black;
+	border:solid white 2px; 
+	box-shadow:0px 0px 10px black;
+	color:red;
+}
+
+#confDelete {
+	border-radius:10px;
+	background:linear-gradient(45deg, green, greenyellow);
+	text-shadow:0px 2px 3px black;
+	border:solid #005b00 3px;
+	box-shadow:0px 0px 10px black;
+}
+
+.redsocial:hover {
+	 transform: scale(1.1);
+}

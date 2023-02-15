@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.navbar-brand:hover {
+	border-bottom:solid black 6px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+p {
+	display:none;
+}
+
+.mostrarErrores {
+	display:block;
+}
+
+.colorcito {
+	background-color:beige;
+}
+
+.file-select::before {
+  background-color: #5678EF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar imagen'; /* testo por defecto */
+  position: absolute;
+  padding:7px;
+}
+
+#errorlog {
+	border-radius:10px;
+	background:linear-gradient(45deg, #660000, red);
+	text-shadow:0px 2px 3px black;
+	border:solid #530000 3px;
+	box-shadow:0px 0px 10px black;
+}
+
+#errorNewUser {
+	border-radius:10px;
+	background:linear-gradient(45deg, #660000, red);
+	text-shadow:0px 2px 3px black;
+	border:solid #530000 3px;
+	box-shadow:0px 0px 10px black;
+}
+
+.contenedor::-webkit-scrollbar {
+    width: 15px;     /* Tamaño del scroll en vertical */
+    height: 8px;    /* Tamaño del scroll en horizontal */
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+    background: #ff8000;
+    border-radius: 10px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+.contenedor::-webkit-scrollbar-thumb:hover {
+    background: #c46200;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+.contenedor::-webkit-scrollbar-thumb:active {
+    background-color: #c46200;
+}
+
+.contenedor::-webkit-scrollbar-track {
+    background: #e1e1e1;
+    border-radius: 4px;
+}
+
+.rojo {
+	color:red;
+}
+
